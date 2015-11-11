@@ -1,0 +1,27 @@
+<datasource>
+    <name>WSO2_ANALYTICS_FS_DB_HDFS</name>
+    <description>The datasource used for analytics file system</description>
+    <jndiConfig>
+        <name>jdbc/WSO2HDFSDB</name>
+    </jndiConfig>
+    <definition type="HDFS">
+        <configuration>
+            <property>
+                <name>fs.default.name</name>
+                <value>hdfs://localhost:9000</value>
+            </property>
+            <property>
+                <name>dfs.data.dir</name>
+                <value>/dfs/data</value>
+            </property>
+            <property>
+                <name>fs.hdfs.impl</name>
+                <value>org.apache.hadoop.hdfs.DistributedFileSystem</value>
+            </property>
+            <property>
+                <name>fs.file.impl</name>
+                <value>org.apache.hadoop.fs.LocalFileSystem</value>
+            </property>
+        </configuration>
+    </definition>
+</datasource>
